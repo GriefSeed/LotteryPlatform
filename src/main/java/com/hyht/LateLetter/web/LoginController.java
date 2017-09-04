@@ -24,7 +24,7 @@ public class LoginController {
                               @RequestParam(name = "echostr",required = false) String  echostr){
         if(WeiXinCheck.checkSignature(signature, timestamp, nonce)){
             System.out.println("验证成功");
-            return "echostr";
+            return echostr;
         }
         System.out.println("验证失败");
         return "";
