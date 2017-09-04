@@ -55,7 +55,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>SM</finalName>
+        <finalName>H5SM</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
