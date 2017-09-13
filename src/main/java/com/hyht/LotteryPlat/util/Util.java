@@ -1,10 +1,7 @@
-package com.hyht.LateLetter.util;
+package com.hyht.LotteryPlat.util;
 
 import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
 import java.net.UnknownHostException;
-import java.util.Enumeration;
 
 /**
  * 自己写的工具包

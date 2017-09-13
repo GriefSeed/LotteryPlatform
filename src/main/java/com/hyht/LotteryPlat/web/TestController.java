@@ -1,17 +1,17 @@
-package com.hyht.LateLetter.web;
+package com.hyht.LotteryPlat.web;
 
 
 
-import com.hyht.LateLetter.util.WeiXinCheck;
+import com.hyht.LotteryPlat.util.WeiXinCheck;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoginController {
+public class TestController {
 
-    @RequestMapping("/")
+    @RequestMapping("/test")
     public String loginPageTest() {
         System.out.println("热部署2333333");
         return "<h1>TEST SUCCESS！微信后台连通测试</h1>";

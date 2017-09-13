@@ -1,4 +1,4 @@
-package com.hyht.LateLetter.util;
+package com.hyht.LotteryPlat.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
