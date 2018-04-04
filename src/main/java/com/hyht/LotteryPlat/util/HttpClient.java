@@ -1,4 +1,4 @@
-package com.hyht.LotteryPlat;
+package com.hyht.LotteryPlat.util;
 
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.CloseableHttpClient;

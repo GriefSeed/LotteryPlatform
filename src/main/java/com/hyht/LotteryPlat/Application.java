@@ -1,16 +1,19 @@
 package com.hyht.LotteryPlat;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.web.servlet.ErrorPage;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,9 +24,13 @@ import java.util.concurrent.TimeUnit;
 //mapper 接口扫描包
 @MapperScan("com.hyht.LotteryPlat.dao")
 @ComponentScan
+
 @EnableAutoConfiguration
 @SpringBootApplication
 public class Application{
+
+
+
 
     @Bean
     public TomcatEmbeddedServletContainerFactory servletContainerFactory(){
@@ -35,7 +42,9 @@ public class Application{
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+        SpringApplication app = new SpringApplication(Application.class);
+        app.addListeners(new MyApplicationStartedEventListener());
+        app.run(args);
     }
 }
 

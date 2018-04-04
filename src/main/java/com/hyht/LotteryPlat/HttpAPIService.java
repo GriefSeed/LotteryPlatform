@@ -1,4 +1,4 @@
-package com.hyht.LotteryPlat.util;
+package com.hyht.LotteryPlat;
 
 
 
